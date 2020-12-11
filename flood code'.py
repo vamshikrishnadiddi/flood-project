@@ -7,6 +7,8 @@ import seaborn as sns
 dataset = pd.read_csv('finaldata.csv')
 X = dataset.iloc[:, 2:8].values
 y = dataset.iloc[:, 8].values
+vamshi=22
+vamshi=vamshi*22
 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 20)
