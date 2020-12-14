@@ -7,9 +7,7 @@ import seaborn as sns
 dataset = pd.read_csv('finaldata.csv')
 X = dataset.iloc[:, 2:8].values
 y = dataset.iloc[:, 8].values
-vamshi=22
-vamshi=vamshi*22
-lplp
+
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 20)
 sns.pairplot(dataset,palette='coolwarm')
@@ -33,6 +31,10 @@ k=cm[0][0]+cm[1][1]
 l=(cm[0][0]+cm[1][0]+cm[1][1]+cm[0][1])
 (k/l)*100
 
+
+from sklearn.metrics import r2_score
+coefficient_of_determination = r2_score(y_test, y_pred)
+coefficient_of_determination
 
 from sklearn.metrics import r2_score
 coefficient_of_determination = r2_score(y_test, y_pred)
